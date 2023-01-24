@@ -62,3 +62,24 @@ unsigned int count_sort(int *array, size_t size, unsigned int digit)
 	free(copy);
 	return (sort);
 }
+
+/**
+ * radix_sort - sorts an array of integers in ascending order using
+ * the Radix sort algorithm
+ * @array: array to sort
+ * @size: size of the array
+ *
+ * Return: void
+ */
+void radix_sort(int *array, size_t size)
+{
+	unsigned int i, sort = 1;
+
+	if (array == NULL || size < 2)
+		return;
+	for (i = 1; sort == 1; i++)
+	{
+		sort = count_sort(array, size, i);
+		print_array(array, size);
+	}
+}
