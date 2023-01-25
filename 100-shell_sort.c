@@ -35,7 +35,7 @@ void shell_sort(int *array, size_t size)
 	for (gap = get_max_gap(size); gap; gap = (gap - 1) / 3)
 	{
 		for (i = gap; i < size; i++)
-		{											{
+		{
 			temp = array[i];
 			for (j = i; j > gap - 1 && array[j - gap] > temp; j -= gap)
 			{
